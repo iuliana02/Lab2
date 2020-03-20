@@ -1,5 +1,7 @@
 #include <iostream>
-#include "complex.h"
+#include <cmath>
+#include <string>
+
 using namespace std;
 
 Complex::Complex()
