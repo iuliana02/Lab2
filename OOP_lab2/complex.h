@@ -15,8 +15,8 @@ public:
 	double getImg() const; //access method
 	void setRe(double re);
 	void setImg(double im);
-	Complex add(Complex other);
-	Complex mult(Complex otherone);
+	Complex add(Complex number);
+	Complex mult(Complex number);
 	Complex quot(Complex nr);
 	Complex show_compl();
 	float unghi();
