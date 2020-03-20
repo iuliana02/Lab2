@@ -89,3 +89,12 @@ Complex Complex::quot(Complex nr)
 	}
 	return quotient;
 }
+
+//Modulul unui nr complex
+//Formula: |z|= radical din (a^2+b^2)
+double Complex::abs()
+{
+	double modul;
+	modul = sqrt( (this->getRe * this->getRe()) + (this->getImg() * this->getImg()));
+	return modul;
+}
