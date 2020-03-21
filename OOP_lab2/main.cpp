@@ -94,4 +94,5 @@ int main()
 {
 	erstellen();
 	sortieren();
+	return 0;
 }
