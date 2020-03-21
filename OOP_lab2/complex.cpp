@@ -88,6 +88,7 @@ Complex Complex::mult(Complex number)
 		product.setRe(this->getRe() * number.getRe() + this->getImg() * number.getImg());
 		product.setImg(this->getRe() * number.getImg() - this->getImg() * number.getRe());
 	}
+	return product;
 }
 
 //Division of 2 complex numbers
