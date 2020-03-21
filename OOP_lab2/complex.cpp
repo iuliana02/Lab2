@@ -19,7 +19,6 @@ Complex::Complex(double re, double img)
 //destructor
 Complex::~Complex() 
 {
-
 }
 
 //return real part (getter)
@@ -44,6 +43,25 @@ void Complex::setRe(double re)
 void Complex::setImg(double img)
 {
 	this->img = img;
+}
+
+//show the exponential form
+string Complex::show_exp()
+{
+	double alpha;
+	alpha = atan2(this->getImg(), this->getRe()); //atan2 face arctg la (a/b)
+	string rez = to_string(this->abs()) + "*e^" + (to_string(alpha) + "*i");
+	return rez;
+
+}
+
+//show the complex form (forma simpla)
+Complex Complex::show_compl()
+{
+	Complex n;
+	n.setRe(this->getRe());
+	n.setImg(this->getImg());
+	return n;
 }
 
 //Add 2 complex numbers
@@ -97,4 +115,16 @@ double Complex::abs()
 	double modul;
 	modul = sqrt( (this->getRe * this->getRe()) + (this->getImg() * this->getImg()));
 	return modul;
+}
+
+//Forma polara (forma trigonometrica)
+//Formula: z=r(cos @ + i sin @) , r=modulul, alfa=arctan(b/a)
+string Complex:: compute_polar()
+{
+	double polar_re, polar_im, alpha;
+	alpha = atan2(this->getImg(), this->getRe());
+	polar_re = cos(alpha);
+	polar_im = sin(alpha);
+	string rez = to_string(this->abs() * (polar_re + polar_im)) + "*i";
+	return rez;
 }

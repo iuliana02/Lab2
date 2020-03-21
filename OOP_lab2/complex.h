@@ -6,26 +6,23 @@ using namespace std;
 
 class Complex {
 
-public:
-	Complex(double re, double img);
-	Complex();
-	~Complex();
-
-	double getRe() const;      //access method
-	double getImg() const; //access method
-	void setRe(double re);
-	void setImg(double im);
-	Complex add(Complex number);
-	Complex mult(Complex number);
-	Complex quot(Complex nr);
-	Complex show_compl();
-	float unghi();
-	double abs();
-	string compute_polar();
-	string show_exp();
-	
-
 private:
 	double re;
 	double img;
+
+public:
+	Complex(double re, double img);
+	Complex(); //constructor
+	~Complex(); //destructor
+	double getRe() const; //gettere
+	double getImg() const; 
+	void setRe(double re); //settere 
+	void setImg(double im);
+	Complex show_compl();
+	string show_exp();
+	Complex add(Complex number);
+	Complex mult(Complex number);
+	Complex quot(Complex nr);
+	double abs();
+	string compute_polar();
 };
