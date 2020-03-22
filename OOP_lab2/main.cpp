@@ -23,14 +23,6 @@ void erstellen()
 	Complex r2 = nr2.show_compl();
 	cout << r1.getRe() <<"+"<< r1.getImg() << "i" << endl;
 	cout << r2.getRe() <<"+"<< r2.getImg() << "i" << endl;
-
-
-	Complex nr3(2, 9);
-	Complex r3 = nr3.show_compl();
-	Complex nr4(7, 3.2);
-	Complex r4 = nr4.show_compl();
-	Complex nr5(11.4, 16);
-	Complex r5 = nr5.show_compl();
 }
 
 void sortieren()
@@ -50,7 +42,7 @@ void sortieren()
 		c1.setImg(img);
 		sir[i] = c1;
 	}
-	cout << "Komplaxe Zahlen sind: " << endl;
+	cout << "Komplexe Zahlen sind: " << endl;
 	for (i = 0; i <= n - 1; i++)
 		if (sir[i].getImg() > 0)
 			cout << sir[i].getRe() << "+" << sir[i].getImg() << "i" << endl;
@@ -67,7 +59,7 @@ void sortieren()
 				lista_modul[i] = lista_modul[j];
 				lista_modul[j] = auxiliar;
 			}
-	cout << "die Module der sortierten Zahlen sind: "; //afisez modulele sortate crescator pe ecran
+	cout << "die Module der sortierten Zahlen sind: "<<endl; //afisez modulele sortate crescator pe ecran
 	for (i = 0; i < n; i++)
 		cout << lista_modul[i] << " " << endl;
 	cout << "die Komplexe zahlen sortiert sind:  ";
@@ -89,10 +81,25 @@ void sortieren()
 	else
 		cout << suma_real << suma_imaginar << "i" << endl;
 }
+void test_summe()
+{
+	Complex nr1 = Complex(-3, -6);
+	Complex nr2 = Complex(3, 6);
+	Complex rez = nr1.add(nr2);
+	if (rez.getRe() == 0 && rez.getImg() == 0)
+		cout << "Test1 ist ok"<<endl;
+	Complex nr3 = Complex(-2, -2);
+	Complex nr4 = Complex(9, 3);
+	Complex rez2 = nr3.add(nr4);
+	if (rez2.getRe() == 7 && rez2.getImg() == 1)
+		cout << "Test2 ist ok!";
+}
 
 int main()
 {
 	erstellen();
 	sortieren();
+	cout << "TESTE"<<endl;
+	test_summe();
 	return 0;
 }
