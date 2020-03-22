@@ -59,6 +59,7 @@ void sortieren()
 				lista_modul[i] = lista_modul[j];
 				lista_modul[j] = auxiliar;
 			}
+
 	cout << "die Module der sortierten Zahlen sind: "<<endl; //afisez modulele sortate crescator pe ecran
 	for (i = 0; i < n; i++)
 		cout << lista_modul[i] << " " << endl;
@@ -70,6 +71,7 @@ void sortieren()
 					cout << sir[j].getRe() << sir[j].getImg() << "i  " << endl;
 				else
 					cout << sir[j].getRe() << "+" << sir[j].getImg() << "i  " << endl;
+
 	cout << "die Gesamtsumme der Reihe: ";
 	double suma_real = 0, suma_imaginar = 0;
 	for (i = 0; i < n; i++) //calculez suma tuturor numerelor complexe citite anterior de la tastatura
